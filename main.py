@@ -20,7 +20,7 @@ else:
 if driver_location is None:
     print("ERROR COULD NOT SET DRIVER LOCATION!")
     exit(406)
-
+print(f"Script started!")
 while True:
     x = datetime.today().strftime("%A")
     y = datetime.today().strftime("%I:%M%p")
@@ -72,7 +72,7 @@ while True:
                 feeling_boxes[feelings].click()
                 what_am_doing_today[0].send_keys(text)
                 submit[0].click()
-               #browser.close()
+                browser.close()
                 print(f"Submitted google form at:\nURL: {url}\nText: {text}\nFeeling Box (0 = Happy 1 = Mixed 2 = Bad): {feelings}")
                 exit(0)
             except Exception as e:
